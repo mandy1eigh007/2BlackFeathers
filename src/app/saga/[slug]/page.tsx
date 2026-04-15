@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { getSupabase } from '@/lib/supabase';
 import { useAuth } from '@/lib/auth-context';
 import { getSagaBySlug } from '@/lib/queries';
+import { getMockSagaBySlug } from '@/lib/mock-data';
 import type { SagaDetail } from '@/lib/types';
 
 type PageState =
@@ -27,7 +28,13 @@ export default function SagaPage() {
 
     const client = getSupabase();
     if (!client) {
-      setState({ status: 'not_found' });
+      // No Supabase configured — use mock data
+      const mockSaga = getMockSagaBySlug(slug);
+      if (mockSaga) {
+        setState({ status: 'ready', saga: mockSaga });
+      } else {
+        setState({ status: 'not_found' });
+      }
       return;
     }
 
