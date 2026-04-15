@@ -2,7 +2,7 @@
 
 > Stories that actually end. Power. Betrayal. Rebirth.
 
-A cinematic short-form streaming app built with Next.js 14, TypeScript, and Tailwind CSS.
+A cinematic short-form streaming app built with Next.js 15, TypeScript, and Tailwind CSS.
 
 ## Brand System v2.1.0
 
