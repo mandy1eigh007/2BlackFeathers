@@ -50,6 +50,8 @@ A cinematic short-form streaming app built with Next.js 15, TypeScript, and Tail
 
 3. (Optional) Add your Supabase credentials to `.env.local`
 
+   For the full auth/database setup checklist, see [docs/SUPABASE_AUTH_SETUP.md](./docs/SUPABASE_AUTH_SETUP.md).
+
 4. Run the development server:
    ```bash
    npm run dev
